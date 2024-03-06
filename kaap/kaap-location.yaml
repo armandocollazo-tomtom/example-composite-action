@@ -3,7 +3,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: kaap-catalog-location
+  name: -location
   description: a reference to all kaap entities in the current repository
 spec:
   targets:
