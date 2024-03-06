@@ -1,0 +1,20 @@
+# Copyright (C) 2023 TomTom NV. All rights reserved.
+
+apiVersion: tomtom.com/v1alpha1
+kind: KaaPProject
+metadata:
+  name: example-composite-action-2
+  title: example-composite-action-2
+  description: The definition of your KaaP Project example-composite-action-2.
+  annotations:
+    tomtom.com/kaap-project-repository: armandocollazo-tomtom/example-composite-action
+  tags:
+    - project
+    - kaap
+spec:
+  securityGroupId: 17238b9e-fa40-4172-a895-196c6b1f80ba
+  slackChannel: test
+  type: azure
+  owner: group:default/my-team-dev
+  system: kaap-project
+  lifecycle: production
