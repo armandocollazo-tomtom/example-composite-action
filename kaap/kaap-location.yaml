@@ -1,0 +1,10 @@
+# Copyright (C) 2023 TomTom NV. All rights reserved.
+
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: kaap-catalog-location
+  description: a reference to all kaap entities in the current repository
+spec:
+  targets:
+    - ./kaap/*.yaml

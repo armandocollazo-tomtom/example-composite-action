@@ -1,0 +1,28 @@
+# Copyright (C) 2023 TomTom NV. All rights reserved.
+
+name: KaaP Entity Validation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "kaap/**.yaml"
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency: -
+
+jobs:
+  validate-kaap-entities:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate KaaP entities
+        uses: tomtom-internal/kaap-project-definition-validator@v1.0.0
+        with:
+          projectPath: ./kaap/**/*.yaml
